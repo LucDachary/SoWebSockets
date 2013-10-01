@@ -4,9 +4,10 @@ try
 	if(!window.WebSocket)
 		throw "Impossible d'utiliser WebSocket. Votre navigateur ne l'implémente pas.";
 
-	var host = "127.0.0.1";
+	var host = "192.168.0.254";
+	var host = "raspi.firefoxsupport.net";
 	var port = 12345;
-	var target = "/SoWebSockets/php/test.php";
+	var target = "/websocket/php/test.php";
 	
 	var url = "ws://" + host + ":" + port + target;
 	//DEV
