@@ -4,10 +4,22 @@
 	<meta charset="utf-8"/>
 	<title>So Web Sockets</title>
 	<link rel="stylesheet" href="css/style.css"/>
-	<script src="js/script.js"></script>
 </head>
 <body>
-<h1>So Web Sockets</h1>
-
+	<h1>So Web Sockets</h1>
+	<form name="send_message" method="POST" onSubmit="return control(this);" action="javascript:Send()">
+	<table class="w50 fright">
+		<tr>
+			<td colspan="3"><input type="text" name="msg" placeholder="Saisissez votre message..."/></td>
+		</tr>
+		<tr>
+			<td class="tacenter"><input type="submit" value="Envoyer"/></td>
+			<td class="tacenter"><a href="javascript:Connect('ws://echo.websocket.org');" class="submit_like">Connexion</a></td>
+			<td class="tacenter"><a href="javascript:Close()" class="submit_like">Déconnexion</a></td>
+		</tr>
+	</table>
+	</form>
+	<ul class="w50 fleft" id="operations"></ul>
+	<script src="js/script.js"></script>
 </body>
 </html>
